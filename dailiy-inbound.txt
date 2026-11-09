@@ -1,0 +1,14 @@
+ETA
+NO DO/SJ
+INBOUND NUMBER
+Lot
+Nama Supplier
+SKU Code
+SKU Name
+Ctn
+Pcs
+Realisasi
+Selisih
+Status
+ATA
+REMARKS

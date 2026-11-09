@@ -1,0 +1,63 @@
+{
+  "name": "Laravel + Accurate API",
+
+  "dockerComposeFile": "docker-compose.yml",
+
+  "service": "app",
+
+  "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+
+  "forwardPorts": [
+    8000,
+    5173,
+    3306
+  ],
+
+  "portsAttributes": {
+    "8000": {
+      "label": "Laravel",
+      "onAutoForward": "openBrowser"
+    },
+
+    "5173": {
+      "label": "Vite"
+    },
+
+    "3306": {
+      "label": "MySQL"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "onecentlin.laravel-blade",
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "codingyu.laravel-goto-view",
+        "shufo.vscode-blade-formatter",
+        "xdebug.php-debug",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "mikestead.dotenv",
+        "humao.rest-client"
+      ],
+
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+        "[php]": {
+          "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+        },
+
+        "[blade]": {
+          "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+        }
+      }
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}

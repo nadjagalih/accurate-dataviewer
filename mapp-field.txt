@@ -1,0 +1,17 @@
+- Ambil data PO
+    - field tanggal request PO (notes : ini masih belum pasti tanggal request apakah tanggal terbit PR atau PO) > asumsikan menggunakan requiredDate dari endpoint PR
+    - field nama warehouse
+    - field nama item
+    - field request quantity
+    - field satuan
+    - field ETA (shipDate)
+    - field nomor PR
+    - field supplier
+    - field nomor PO
+    - field release PO (sama dengan field tanggal request PO)
+    - field delivery type (menghitung process history dengan historyType : RI)
+    - field delivery date (mengambil historyDate dengan historyType : RI)
+    - field qty delivery (perlu mengambil dari setiap RI di processHistory, jadi request ke endpoint receive-item/detail.do?id=… , id dapat di ambil di history RI processHistory)
+    - field qty terproses (quantity - remainingQuantity)
+    - field qty belum terproses (remainingQuantity)
+    - field status (statusName)
